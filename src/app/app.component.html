@@ -1,0 +1,28 @@
+<div class="header">
+  <span><img class="logo" src="../assets/stage-logo-small.png" alt="Image Not Found!"/></span>
+  <span><h1>{{title}}</h1></span>
+</div>
+
+
+<div class="main" >
+  <div class="calculator">
+    <input type="text" class="screen" readonly value="{{result}}"/>
+    <button class="num clear" (click)="clearScreen()" value="c">c</button>
+    <button class="num" (click)="numClicked('/')" value="/">/</button>
+    <button class="num" (click)="numClicked('*')" value="*">*</button>
+    <button class="num" (click)="numClicked('7')" value="7">7</button>
+    <button class="num" (click)="numClicked('8')" value="8">8</button>
+    <button class="num" (click)="numClicked('9')" value="9">9</button>
+    <button class="num" (click)="numClicked('-')" value="-">-</button>
+    <button class="num" (click)="numClicked('4')" value="4">4</button>
+    <button class="num" (click)="numClicked('5')" value="5">5</button>
+    <button class="num" (click)="numClicked('6')" value="6">6</button>
+    <button class="num add" (click)="numClicked('+')" value="+">+</button>
+    <button class="num" (click)="numClicked('1')" value="1">1</button>
+    <button class="num" (click)="numClicked('2')" value="2">2</button>
+    <button class="num" (click)="numClicked('3')" value="3">3</button>
+    <button class="num" (click)="numClicked('0')" value="0">0</button>
+    <button class="num" (click)="numClicked('.')" value="." [disabled]="isDotDisabled()">.</button>
+    <button class="num equal" (click)="performCalculation()"  value="=">=</button>
+  </div>
+</div>
